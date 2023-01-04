@@ -10,11 +10,21 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+:root {
+    --main-color: #37958F;
+    --scnd-color: #593FA4;
+    --border-color: #D9D9D9;
+    --text-1: #303030;
+    --red: #D82727;
+    --text-2: #747474;
+}
 
 html {
     overflow: hidden;
 }
 
+
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
@@ -23,6 +33,7 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
+    background-color: red;
     justify-content: space-between;
     padding: 10px;
 }
@@ -47,3 +58,9 @@ html {
     text-transform: uppercase;
     font-weight: 800;
 }
+
+
+/* MAIN */
+
+
+
