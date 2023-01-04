@@ -61,6 +61,23 @@ html {
 
 
 /* MAIN */
+.main {
+    display: flex;
+    margin-top: 60px;
+}
 
+/* FIRT SCREEN */
+.firt_screen {
+    padding: 10px;
+    background-color: pink;
+    overflow-y: scroll;
+}
+
+.card_reminder {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
 
 
