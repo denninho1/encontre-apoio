@@ -29,7 +29,7 @@ body {
 }
 
 .mobile_container {
-    width: 425px;
+    width: 428px;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -46,17 +46,12 @@ body {
 
 /* HEADER */
 .header {
-    position: sticky;
-    top: 0;
-    left: 0;
     height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    z-index: 10;
-    background-color: #fff;
 }
 
 .button_menu {
