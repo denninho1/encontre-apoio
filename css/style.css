@@ -30,8 +30,18 @@ body {
 
 .mobile_container {
     width: 425px;
-    overflow-x: hidden;
+    height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.mobile_container::-webkit-scrollbar {
+    background-color: transparent;
+    width: .5rem; 
+}
+  
+.mobile_container::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
 }
 
 /* HEADER */
@@ -45,6 +55,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    z-index: 10;
+    background-color: #fff;
 }
 
 .button_menu {
