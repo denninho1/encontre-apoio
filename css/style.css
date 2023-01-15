@@ -37,11 +37,11 @@ body {
 
 .mobile_container::-webkit-scrollbar {
     background-color: transparent;
-    width: .5rem; 
+    width: .1rem; 
 }
   
 .mobile_container::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
+    background-color: transparent;
 }
 
 /* HEADER */
@@ -84,7 +84,40 @@ body {
 }
 
 
-/* MAIN */
+/* NAVS */
+.navs {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    height: 80px;
+    border-top: 1px solid #8A8A8A;
+}
+
+.navs button {
+    flex: 1;
+    cursor: pointer;
+}
+
+.navs button:first-child span {
+    font-size: 10px;
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+.navs button span {
+    display: block;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 500;
+    color: #8A8A8A;
+}
+
+
+/* SCREENS */
 .screens {
     width: 100%;
     transition: all ease-in 1s;
