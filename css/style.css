@@ -57,6 +57,9 @@ body {
     margin-bottom: .2rem;
     border-radius: 1rem;
 }
+.button_menu .row:last-child {
+    margin-bottom: 0;
+}
 
 .button_menu .row:nth-child(2) {
     width: 50%;
