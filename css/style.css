@@ -56,6 +56,7 @@ body {
 
 .button_menu {
     width: 1.5rem;
+    cursor: pointer;
 }
 
 .button_menu .row{
@@ -64,6 +65,7 @@ body {
     background-color: #000;
     margin-bottom: .2rem;
     border-radius: 1rem;
+    transition: all 300ms ease-in;
 }
 .button_menu .row:last-child {
     margin-bottom: 0;
@@ -74,8 +76,11 @@ body {
 }
 
 .logo {
-    text-transform: uppercase;
     font-weight: 800;
+}
+
+.header .logo .destaque {
+    color: var(--main-color);
 }
 
 
@@ -88,7 +93,7 @@ body {
     right: 0;
     background-color: #fff;
     display: flex;
-    height: 80px;
+    height: 70px;
     border-top: 1px solid #8A8A8A;
 }
 
@@ -98,7 +103,7 @@ body {
 }
 
 .navs button:first-child span {
-    font-size: 10px;
+    font-size: 8px;
     color: var(--main-color);
     font-weight: 900;
 }
@@ -106,7 +111,7 @@ body {
 .navs button span {
     display: block;
     line-height: 1;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     color: #8A8A8A;
 }
@@ -171,6 +176,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 300ms linear;
 }
 
 .card_reminder .reminder_btns .btn_like {
