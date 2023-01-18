@@ -46,6 +46,7 @@ body {
 
 /* HEADER */
 .header {
+    position: relative;
     height: 60px;
     width: 100%;
     display: flex;
@@ -75,6 +76,92 @@ body {
     width: 50%;
 }
 
+/* NAV SIDE */
+.header .nav_side_container {
+    position: absolute;
+    width: 75%;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    z-index: 20;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 300ms ease-out;
+}
+
+.header .nav_side_container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width:0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.header .nav_side_container.active {
+    left: 0;
+}
+
+.header .nav_side_container.active:after {
+    width: 100%;
+}
+
+.header .nav_side_container .nav_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D9D9D9;
+    padding: 10px 15px;
+}
+
+.header .nav_side_container .nav_header button{
+    background-color: transparent;
+    font-size: 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.header .nav_side_container .navs_side {
+    font-size: 19px;
+    text-align: center;
+}
+
+.header .nav_side_container .navs_side li {
+    padding: 20px 0;
+    border-top: 1px solid #D9D9D9;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateX(-50px);
+    transition: 400ms linear;
+}
+.header .nav_side_container .navs_side li:last-child {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.header .nav_side_container.active .navs_side li {
+    transform: translateX(0);
+}
+
+.header .nav_side_container .nav_footer {
+    width: 100%;
+    border-top: 1px solid #D9D9D9;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-2);
+}
+
+.header .nav_side_container .nav_footer:hover {
+    color: var(--text-1);
+}
+
 .logo {
     font-weight: 800;
 }
@@ -82,7 +169,6 @@ body {
 .header .logo .destaque {
     color: var(--main-color);
 }
-
 
 /* NAVS */
 .navs {
@@ -281,6 +367,6 @@ body {
 @media (min-width: 425px) {
     .mobile_container {
         box-shadow: 0 0 7px rgba(0, 0, 0, 7);
-        border-radius: 20px;
+/*         border-radius: 20px; */
     }
 }
