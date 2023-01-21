@@ -17,6 +17,7 @@ const navShow = () => {
 buttonMenu.addEventListener('click', () => {
     navShow();
 });
+
 buttonClose.addEventListener('click', () => {
     navShow();
 });
@@ -30,5 +31,5 @@ navBottomBtns.forEach((navBtn, index) => {
             navBottomBtns[i].classList.remove('active');
         }
         navBtn.classList.add('active');
-    })
-})
+    });
+});
