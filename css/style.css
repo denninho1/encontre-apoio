@@ -169,11 +169,11 @@ body {
 
 /* NAVS */
 .navs {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    width: 100%;
-    left: 0;
-    right: 0;
+    width: 428px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #fff;
     display: flex;
     height: 70px;
