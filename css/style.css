@@ -187,8 +187,16 @@ body {
     flex: 1;
     cursor: pointer;
 }
+.navs .nav_bottom_btn svg {
+    transition: 200ms ease;
+}
 
-.navs button:first-child span {
+.navs .nav_bottom_btn.active svg {
+    width: 2rem;
+    fill: var(--main-color);
+}
+
+.navs .nav_bottom_btn.active span {
     font-size: 8px;
     color: var(--main-color);
     font-weight: 900;
@@ -200,6 +208,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     color: #8A8A8A;
+    transition: 200ms ease-in;
 }
 
 
