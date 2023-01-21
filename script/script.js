@@ -46,5 +46,27 @@ navBottomBtns.forEach((navBtn, index) => {
     });
 });
 
+// reminder card interaction
+
+const buttonsReminder = document.querySelectorAll('.reminder_btn');
+
+const reminderAction = (e) => {
+/*     for (let i = 0; i < buttonsReminder.length; i++) {
+        if (e.classList.contains('btn_like')) {
+            buttonsReminder[1].classList.add('not_selected')
+        } else {
+            buttonsReminder[0].classList.add('not_selected')
+        }
+    } */
+
+    e.classList.toggle('rated')
+}
+
+buttonsReminder.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        reminderAction(btn);
+    })
+});
+
 
 
