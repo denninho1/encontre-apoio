@@ -322,6 +322,7 @@ body {
     width: 100%;
     transition: all ease-in 1s;
     display: flex;
+    padding-bottom: 80px;
 }
 .screen {
     padding: 10px;
@@ -597,12 +598,14 @@ body {
 .toTalk_screen .center p {
     font-size: 17px;
     padding-bottom: 15px;
+    font-weight: 500;
+    color: var(--text-2);
 }
 
 .toTalk_screen .center button {
     display: block;
     margin: 0 auto;
-    padding: 20px 90px;
+    padding: 15px 0;
     background-color: var(--main-color);
     font-size: 20px;
     border-radius: 50px;
@@ -611,6 +614,7 @@ body {
     font-weight: 600;
     text-transform: lowercase;
     cursor: pointer;
+    width: 80%;
 }
 
 .toTalk_screen .center .tel {
