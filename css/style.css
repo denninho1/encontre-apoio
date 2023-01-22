@@ -92,6 +92,7 @@ body {
     cursor: pointer;
     width: 90%;
     letter-spacing: 1px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .welcome_screen .or {
@@ -210,6 +211,7 @@ body {
     background-color: transparent;
     font-size: 25px;
     padding: 5px 10px;
+    font-weight: 900;
     cursor: pointer;
     margin-right: 50px;
 }
@@ -464,7 +466,7 @@ body {
 .button_helps {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 .button_helps button{
@@ -474,7 +476,7 @@ body {
     justify-content: center;
     gap: 3px;
     padding: 30px 10px;
-    border-radius: 10px;
+    border-radius: 30px;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -638,6 +640,77 @@ body {
     letter-spacing: 1px;
 }
 
+/* QUEUE CHAT */
+.queue_chat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.queue_chat .center {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+}
+
+.queue_chat .center h3 {
+    color: var(--text-1);
+    font-size: 17px;
+    width: 70%;
+    margin: 0 auto 20px
+}
+
+.queue_chat .center .time_count {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.queue_chat .center .cancel_queue {
+    width: 60%;
+    margin: 0 auto 20px;
+    padding: 10px 0;
+    background-color: var(--red);
+    font-size: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.ball_loading {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid var(--text-1);
+    animation: rotate 1s ease infinite;
+}
+
+.ball_loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -45%;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.warning {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-1);
+}
+
 @keyframes come-in {
     0% {
         transform: scale(.9);
@@ -647,6 +720,15 @@ body {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
