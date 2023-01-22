@@ -40,6 +40,97 @@ body {
     background-color: transparent;
 }
 
+/* WELCOME SCREEN */
+.welcome_screen {
+    position: relative;
+    padding: 80px 20px 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.welcome_screen .logo {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.welcome_screen h1 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.welcome_screen h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background-color: #9B9B9B;
+}
+
+.welcome_screen h2 {
+    font-size: 19px;
+    color: var(--text-1);
+    padding-bottom: 15px;
+}
+
+.welcome_screen .visitant_btn, .welcome_screen .professional_btn {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 15px 0;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    width: 90%;
+    letter-spacing: 1px;
+}
+
+.welcome_screen .or {
+    display: block;
+    padding: 20px 0;
+    color: var(--text-2);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.welcome_screen .professional_btn {
+    background-color: var(--scnd-color);
+    opacity: .4;
+    cursor:no-drop;
+}
+
+.welcome_screen .help {
+ position: absolute;
+ bottom: 20px;
+ right: 20px;
+ background-color: var(--main-color);
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ color: #fff;
+ font-weight: 900;
+ cursor: pointer;
+ font-size: 20px;
+}
+
+.mobile_content {
+    display: none;
+}
+
+.mobile_content.active {
+    display: block;
+    animation: come-in 500ms ease;
+}
+
 /* HEADER */
 .header {
     position: relative;
@@ -86,6 +177,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: 300ms ease-out;
+    z-index: 100;
 }
 
 .header .nav_side_container::after {
@@ -163,7 +255,7 @@ body {
     font-weight: 800;
 }
 
-.header .logo .destaque {
+.logo .destaque {
     color: var(--main-color);
 }
 
@@ -542,9 +634,17 @@ body {
     letter-spacing: 1px;
 }
 
+@keyframes come-in {
+    0% {
+        transform: scale(.9);
+        opacity: 0;
+    }
 
-
-
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 /* MEDIA QUERIES */
 
