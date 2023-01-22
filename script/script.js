@@ -15,6 +15,7 @@ const navShow = () => {
 }
 
 buttonMenu.addEventListener('click', () => {
+
     navShow();
 });
 
@@ -68,5 +69,14 @@ buttonsReminder.forEach((btn) => {
     })
 });
 
+// login as guest
 
+const btnVisitant = document.querySelector('.visitant_btn');
+const screensContainer = document.querySelector('.mobile_content');
+const welcomeScreen = document.querySelector('.welcome_screen');
+
+btnVisitant.addEventListener('click', () => {
+    screensContainer.classList.add('active');
+    mobileContainer.removeChild(welcomeScreen)
+})
 
