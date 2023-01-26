@@ -27,7 +27,7 @@ const showQueue = () => {
         </div>
         `
     setTimeout(function() {
-        mobileContent.innerHTML = queueChat;
+        teste.innerHTML = queueChat;
     }, 3000)
 }
 
