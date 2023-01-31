@@ -1,10 +1,9 @@
-const btnTalk = document.querySelector('.talk_btn');
-const teste = document.querySelector('.mobile_content');
+import { mobileContent } from './script.js';
 
 const ballLoad = `<div class="ball_loading"></div>`
 
 const showQueue = () => {
-    teste.innerHTML = ballLoad
+    mobileContent.innerHTML = ballLoad
     const queueChat = `
         <div class="queue_chat">
             <div class="logo">
@@ -27,13 +26,7 @@ const showQueue = () => {
         </div>
         `
     setTimeout(function() {
-        teste.innerHTML = queueChat;
-    }, 3000)
+        mobileContent.innerHTML = queueChat;
+    }, 3000);
 }
 
-/* btnTalk.addEventListener('click', () => {
-    teste.innerHTML = ballLoad
-    setTimeout(function() {
-        showQueue();
-    }, 3000)
-}); */
