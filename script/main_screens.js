@@ -1,4 +1,3 @@
-
 export const init = `
 <section class="init_screen screen">
 <div class="card_reminder">

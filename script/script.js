@@ -1,9 +1,13 @@
 import { init, meet, talk } from './main_screens.js';
 
+// mains elements
+export const mobileContent = document.querySelector('.mobile_content');
+const mobileContainer = document.querySelector('.mobile_container');
+const screensContainer = document.querySelector('.screens');
+
 // side navigation interaction
 const buttonMenu = document.querySelector('.button_menu');
 const navSide = document.querySelector('.nav_overlay');
-const mobileContainer = document.querySelector('.mobile_container');
 
 buttonMenu.addEventListener('click', () => {
     navSide.classList.add('active');
@@ -20,7 +24,6 @@ navSide.addEventListener('click', e => {
 
 // nav bottom select and change screen 
 const navBottomBtns = document.querySelectorAll('.nav_bottom_btn');
-const screensContainer = document.querySelector('.screens');
 const searchBtn = document.querySelector('.search_btn');
 
 navBottomBtns.forEach((navBtn) => {
@@ -56,9 +59,7 @@ buttonsReminder.forEach((btn) => {
 });
 
 // login as guest
-
 const btnVisitant = document.querySelector('.visitant_btn');
-const mobileContent = document.querySelector('.mobile_content');
 const welcomeScreen = document.querySelector('.welcome_screen');
 
 btnVisitant.addEventListener('click', () => {
